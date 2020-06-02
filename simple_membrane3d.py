@@ -339,22 +339,22 @@ if __name__ == "__main__":
 
     prepare()
     init_calc()
-    # while time <= 0.01:
+    while time <= 0.01:
 
-    #     X = []
-    #     Y = []
-    #     Z = []
-    #     if time%10.0 <=0.01:
-    #         history.append([time, ',', particles[1][1][0], ',',particles[1][1][1]])
+        X = []
+        Y = []
+        Z = []
+        if time%10.0 <=0.01:
+            history.append([time, ',', particles[1][1][0], ',',particles[1][1][1]])
             
-    #     calculation()
-    #     time += dt
-    # for i, P in enumerate(particles):
+        calculation()
+        time += dt
+    for i, P in enumerate(particles):
 
-    #     X.append(P[1][0])
-    #     Y.append(P[1][1])
-    #     Z.append(P[1][2])
-    # ims = []
-    # im = ax.scatter(X,Y,Z,c='c')
-    # np.savetxt("time_history.csv", history, fmt="%s")
-    # plt.show
+        X.append(P[1][0])
+        Y.append(P[1][1])
+        Z.append(P[1][2])
+    ims = []
+    im = ax.scatter(X,Y,Z,c='c')
+    np.savetxt("time_history.csv", history, fmt="%s")
+    plt.show()
